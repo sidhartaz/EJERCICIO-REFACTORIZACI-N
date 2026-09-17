@@ -2,10 +2,6 @@ from kivymd.app import MDApp
 from kivy.uix.boxlayout import BoxLayout
 from kivy.core.window import Window
 
-# Ajustar tamaño de la ventana para parecerse a la imagen (proporción)
-Window.size = (350, 450)
-Window.clearcolor = (1, 1, 1, 1)  # Fondo general blanco
-
 class Calculadora(BoxLayout):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -36,6 +32,7 @@ class Calculadora(BoxLayout):
 
 class CalculadoraApp(MDApp):
     def build(self):
+        Window.size = (350, 450)  # Tamaño de ventana (configuración de app)
         return Calculadora()
 
 if __name__ == '__main__':
